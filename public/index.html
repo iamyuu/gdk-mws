@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GDK MWS | Yusuf</title>
+  <meta name="author" content="Yusuf">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Web statik untuk Google Developer Kejar Mobile Web Specialist 2018">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="./static/img/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./static/img/icons/favicon-16x16.png" sizes="16x16">
+
+  <!-- Add to home screen for Android and modern mobile browsers -->
+  <link rel="manifest" href="./static/manifest.webmanifest">
+
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-title" content="mws">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+  <link rel="mask-icon" href="./static/img/icons/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="apple-touch-icon" href="./static/icons/apple-touch-icon.png">
+
+  <!-- Add to home screen for Windows -->
+  <meta name="application-name" content="mws">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./static/img/icons/mstile-144x144.png">
+
+  <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Roboto">
+  <style media="screen">
+    :focus{outline:none;}body,html{height:100%;width:100%;margin:0;padding:0}body{background:#edf0f2;font-family:Roboto,Helvetica,Arial,sans-serif;font-weight:300;display:grid;grid-template-areas:"header header" "sidenav main" "footer footer";grid-template-rows:50px 1fr 45px;grid-template-columns:25%}.card,footer,nav{background-color:#fff}a{color:#0d47a1;text-decoration:none}.sidenav h3>a,h3{font-size:22px;font-weight:300;color:rgba(0,0,0,.7)}.btn,.card,footer,nav{-webkit-box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}nav{grid-area:header}nav img{margin:auto;max-width:325px;padding:10px}footer{grid-area:footer;padding:1em}.sidenav{grid-area:sidenav;text-align:center}.sidenav img{display:block;margin:0 auto;border-radius:50%}.sidenav p{text-align:left}.main{grid-area:main}.card{padding:24px;margin:.8rem;border-radius:2px;-webkit-transition:-webkit-box-shadow .25s;transition:box-shadow .25s}.text-field{position:relative;margin-bottom:20px}.text-field input{font-size:16px;padding:10px 0;display:block;width:100%;border:none;border-bottom:1px solid #757575}.text-field input:focus{outline:0}.text-field label{color:#999;font-size:18px;font-weight:400;position:absolute;pointer-events:none;top:10px;-webkit-transition:.2s ease all;-moz-transition:.2s ease all;transition:.2s ease all}.text-field input:focus~label,.text-field input:valid~label{top:-10px;font-size:14px}.text-field input:focus~label{color:#0d47a1}.text-field span{position:relative;display:block;width:100%}.text-field span:after,.text-field span:before{content:'';height:2px;width:0;bottom:1px;position:absolute;background:#0d47a1;-webkit-transition:.2s ease all;-moz-transition:.2s ease all;transition:.2s ease all}.text-field span:before{left:50%}.text-field span:after{right:50%}.text-field input:focus~span:after,.text-field input:focus~span:before{width:50%}.btn{display:inline-block;height:36px;line-height:36px;padding:0 1rem;border:none;position:relative;overflow:hidden;cursor:pointer;border-radius:4px;text-align:center;vertical-align:middle;background-color:#0d47a1;color:#fff;letter-spacing:.5px;-webkit-transition:.2s ease-out;transition:.2s ease-out}.btn:focus,.btn:hover{background-color:#0b4fb6}.btn:before{content:"";position:absolute;top:50%;left:50%;display:block;width:0;padding-top:0;border-radius:100%;background-color:rgba(236,240,241,.3);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.btn:active:before{width:120%;padding-top:120%;transition:width .2s ease-out,padding-top .2s ease-out}@keyframes glow-out{30%,60%{transform:scale(7)}100%{transform:scale(7);opacity:0}}@media only screen and (max-width:900px){body{grid-template-areas:"header" "sidenav" "main" "footer";grid-template-columns:100%;grid-template-rows:50px repeat(2,1fr) 45px}nav{display:flex}}@media only screen and (max-width:400px){footer{font-size:14px}}@media only screen and (max-width:350px){nav>img{max-width:300px}footer{font-size:12px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">
+      <img src="./static/img/logo.png" alt="Google Developer Kejar logo">
+    </a>
+  </nav>
+  <div class="sidenav">
+    <div class="card">
+      <img alt="Profile image" id="profileImage">
+      <h3><a id="profile" target="_top"></a></h3>
+      <p id="profileDescription"></p>
+    </div>
+  </div>
+  <div class="main">
+    <div class="card">
+      <h3 id="randomContentTitle"></h3>
+      <p id="randomContent"></p>
+    </div>
+    <div class="card">
+      <h3>Penjumlahan 2 angka</h3>
+      <form>
+        <div class="text-field">
+          <input type="text" id="angka_1" autocomplete="off" required autofocus>
+          <label for="angka_1">Angka 1</label>
+          <span></span>
+        </div>
+        <div class="text-field">
+          <input type="text" id="angka_2" autocomplete="off" required>
+          <label for="angka_2">Angka 2</label>
+          <span></span>
+        </div>
+        <button class="btn">Hasil</button>
+      </form>
+      <p id="result"></p>
+    </div>
+    <div class="card">
+      <h3 id="mapboxTitle"></h3>
+      <p id="mapboxContent"></p>
+    </div>
+  </div>
+  <footer>
+    &copy; <span id="getThisYear"></span> <span id="footerName"></span> |
+    Kode tersedia di <a id="footerGit" target="_blank" rel="noopener noreferrer"></a>
+  </footer>
+  <script src="./static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "profile": {
+    "name": "Muhammad Yusuf",
+    "email": "akuyusuf27@gmail.com",
+    "image": "/static/img/profile.jpg",
+    "description": "Hai, saat saya tinggal di Bogor, Indonesia. Umur saya 17 tahun dan baru saja lulus tahun ini di SMK Wikrama Bogor. Saat ini saya bekerja sebagai junior programmer di <a href=\"http://mimopay.com\" target=\"_blank\" rel=\"noopener noreferrer\">Mimopay</a>. Alasana saya mengikuti acara ini adalah untuk mempelajari tentang Progressive Web App (PWA)"
+  },
+  "repository": {
+    "git": "Github",
+    "url": "https://github.com/iamyuu/Google-MobileWebSpecialist-2018"
+  },
+  "randomContent": {
+    "title": "Tentang Google Developers Kejar 2018",
+    "content": "<p>Google Developers Kejar 2018 adalah program yang diinisiasi oleh Google Developers untuk mengasah kemampuan developer Indonesia dalam mengembangkan aplikasi Mobile Android berbasis Kotlin dan Mobile Web Specialist.</p><p>Dan ini adalah salah satu projek untuk Mobile Web Specialist. Mobile Web Specialist ini akan mempelajari, memahami konsep, dan implementasi pengembangan Mobile berbasis Web antara lain dengan mampu membuat aplikasi Off-Line, bekerja dengan Service Worker, memahami cara kerja proses asynchronous, dan masih banyak lagi fitur lainnya. <a href=\"https://events.withgoogle.com/googledeveloperskejar\" target=\"_blank\" rel=\"noopener noreferrer\">Baca lebih lengkap</a></p>"
+  },
+  "mapbox": {
+    "title": "Lokasi istimewa dengan MapBox",
+    "content": "<p>Mapbox adalah salah satu penyedia peta daring kustom terbesar di situs-situs ternama seperti Foursquare, Pinterest, Evernote, Financial Times, dan Uber Technologies. Sejak 2010, Mapbox memperbanyak pilihan peta kustomnya untuk mengisi keterbatasan yang dimiliki penyedia peta seperti Google Maps.</p> <p>Klik <a href=\"/mapbox\">disini</a> untuk melihat contoh beberapa lokasi museum yang ada di Bogor dengan MapBox</p>"
+  },
+  "places": [
+    {
+      "name": "Museum Zoologi",
+      "image": "/static/img/museum/zoology.jpg",
+      "description": "Koleksi besar-besaran dari hewan-hewan yang membatu & diawetkan, termasuk kerangka paus biru.",
+      "location": [
+        -6.6025688,
+        106.8011902
+      ]
+    },
+    {
+      "name": "Museum Nasional Sejarah Alam Indonesia",
+      "image": "/static/img/museum/sejarah-alam.jpg",
+      "description": "Ruang kontemporer untuk pameran bertema & lokakarya pendidikan tentang sejarah & budaya alami.",
+      "location": [
+        -6.5991207,
+        106.7917748
+      ]
+    },
+    {
+      "name": "Museum PETA",
+      "image": "/static/img/museum/peta.jpg",
+      "description": "Struktur abad ke-18 ini menyimpan artefak & display yang mendokumentasikan sejarah militer Indonesia.",
+      "location": [
+        -6.585192,
+        106.7941539
+      ]
+    }
+  ]
+}

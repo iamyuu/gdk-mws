@@ -1,0 +1,209 @@
+:focus{
+  outline: none;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #edf0f2;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-areas: "header header" "sidenav main" "footer footer";
+  grid-template-rows: 50px 1fr 45px;
+  grid-template-columns: 25%;
+}
+a {
+  color: #0d47a1;
+  text-decoration: none;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  color: rgba(0,0,0,0.7);
+}
+nav, footer, .card, .btn {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+nav {
+  background-color: white;
+  grid-area: header;
+}
+nav > img {
+  margin: auto;
+  max-width: 325px;
+  padding: 10px;
+}
+footer {
+  background-color: white;
+  grid-area: footer;
+  padding: 1em;
+}
+.sidenav {
+  grid-area: sidenav;
+  text-align: center;
+}
+.sidenav img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.sidenav h3 > a {
+  font-size: 22px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+}
+.sidenav p {
+  text-align: left;
+}
+.main {
+  grid-area: main;
+}
+.card {
+  background-color: white;
+  padding: 24px;
+  margin: 0.8rem;
+  border-radius: 2px;
+  -webkit-transition: -webkit-box-shadow .25s;
+          transition:         box-shadow .25s;
+}
+.text-field { 
+  position: relative;
+  margin-bottom: 20px;
+}
+.text-field input {
+  font-size: 16px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+.text-field input:focus {
+  outline: none;
+}
+.text-field label {
+  color: #999; 
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  -webkit-transition: 0.2s ease all;
+     -moz-transition: 0.2s ease all; 
+          transition: 0.2s ease all; 
+}
+.text-field input:focus ~ label, .text-field input:valid ~ label {
+  top: -10px;
+  font-size: 14px;
+}
+.text-field input:focus ~ label {
+  color: #0d47a1;
+}
+.text-field span {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.text-field span:before, .text-field span:after {
+  content: '';
+  height: 2px; 
+  width: 0;
+  bottom: 1px; 
+  position: absolute;
+  background: #0d47a1;
+  -webkit-transition: 0.2s ease all;
+     -moz-transition: 0.2s ease all; 
+          transition: 0.2s ease all; 
+}
+.text-field span:before {
+  left: 50%;
+}
+.text-field span:after {
+  right: 50%; 
+}
+.text-field input:focus ~ span:before, .text-field input:focus ~ span:after {
+  width: 50%;
+}
+.btn {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #0d47a1;
+  color: white;
+  letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
+          transition: .2s ease-out;
+}
+.btn:hover, .btn:focus {
+  background-color: #2054a3;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;  
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, .3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+@keyframes glow-out {
+  30%, 60% {
+    transform: scale(7);
+  }
+  100% {
+    transform: scale(7);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    grid-template-areas: "header" "sidenav" "main" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 50px repeat(2, 1fr) 45px
+  }
+  nav {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  nav > img {
+    max-width: 300px;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
